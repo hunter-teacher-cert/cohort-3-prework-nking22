@@ -1,0 +1,34 @@
+#Last Name: King
+
+#First Name: Natalie
+
+#Github username: nking22
+
+# April 22, 2022
+
+# Program Simple
+
+#Problem Statement:The program ask the user for the length of the array and request values based on the array length. It will then print out the values in the array as well as search thenarray based on the value supplied by the user.
+
+def greetings():
+  print('Hello nice to meet you!!!')
+  print('How are you doing?')
+greetings()
+from array import *
+arr = array('i',[])
+z= int(input('Please Enter the length of the array  : '))
+for x in range(z):
+  num = int(input('Please Enter the next value: '))
+  arr.append(num)
+print(arr)
+value = int(input('Please Enter the  serach value: '))
+count = 1
+for y in arr:
+  if y == value:
+    print('The index location of the value is ',count)
+    break
+  count+=1
+  # searching the array using a function
+  print(arr.index(value))
+
+  #End of program
