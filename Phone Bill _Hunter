@@ -1,0 +1,85 @@
+#Laste Name: King
+#First Name: Natalie
+#Username: nking22
+
+#April 22, 2022
+
+#Problem Statement: The program will read Customer Name, Phone Plan, number of minutes, number of texts used and number of megabytes. It should determine each customer’s cost per minute, cost per text and cost per megabyte based on rates given. The program should calculate the final bill for all post-paid customers. The name of the customer along with the final bill, phone plan and then total revenue should be printed on the screen.
+
+#Constants
+
+Cost_Text_Nuff = 2.00
+
+Cost_Min_Nuff = 5.00
+
+Cost_MB_Nuff = 20.00
+
+Cost_Min_Surf = 9.00
+
+Cost_Text_Surf = 2.50
+
+Cost_MB_Surf = 7.00
+
+Cost_Min_Text = 9.00
+
+Cost_Text_Text = 1.00
+
+Cost_MB_Text = 20.00
+
+#Initialization of Variables
+
+Final_Bill = 0
+
+Total_Revenue = 0
+
+Cus_FName = input ('Enter Customer’s first name to end program enter END')
+
+while Cus_FName != 'END':
+
+#Entering customer's data
+
+  Cus_LName = input('Enter Customer’s last name:\t')
+
+  Phone_Plan= input('Enter Phone Plan: \t ')
+
+  Num_MB= float(input('Enter the number of megabytes used:\t'))
+
+  Num_Text= int(input('Enter the number of texts used: \t'))
+
+  Num_Min= int(input('Enter the number of minutes used:\t'))
+
+  print('\n\n\n')
+
+  if Phone_Plan == 'Nuff-Chat Bundle':
+
+    Final_Bill = (Num_Min * Cost_Min_Nuff) + (Num_Text*Cost_Text_Nuff) + (Num_MB*Cost_MB_Nuff)
+
+  elif Phone_Plan =='Surf Bundle':
+
+    Final_Bill = (Num_Min*Cost_Min_Surf) + (Num_Text*Cost_Text_Surf) + (Num_MB*Cost_MB_Surf)
+
+  elif Phone_Plan == 'Text-Mi-Plan':
+
+    Final_Bill = (Num_Min*Cost_Min_Text) + (Num_Text*Cost_Text_Text) + (Num_MB*Cost_MB_Text)
+
+  Total_Revenue = Total_Revenue + Final_Bill
+
+  print ('Customer’s  first name is ', Cus_FName)
+
+  print('\n')
+
+  print ('Customer’s  last name is ', Cus_LName)
+
+  print('\n')
+
+  print ('Phone Plan is ', Phone_Plan)
+
+  print('\n')
+
+  print ('The Final Bill is ', Final_Bill)
+
+  Cus_FName = input ('Enter another Customer’s first name')
+
+#End of while loop
+
+print ('Total Revenue is ', Total_Revenue)
